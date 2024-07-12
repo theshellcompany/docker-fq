@@ -21,7 +21,7 @@ RUN apt-get install -yq --no-install-recommends ca-certificates wget
 WORKDIR /tmp
 RUN wget https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz && \
     tar xvf go${GO_VERSION}.linux-amd64.tar.gz -C /usr/local/ && \
-    rm /tmp/go{GO_VERSION}.linux-amd64.tar.gz
+    rm /tmp/go${GO_VERSION}.linux-amd64.tar.gz
 
 # installation of fq
 WORKDIR /opt
