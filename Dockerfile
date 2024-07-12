@@ -29,7 +29,7 @@ RUN go install github.com/wader/fq@master
 
 # creation of the nonroot user
 RUN groupadd -r nonroot && \
-    useradd -m -g nonroot -d /home/nonroot -s /usr/sbin/nologin -c "nonroot user" nonroot &&
+    useradd -m -g nonroot -d /home/nonroot -s /usr/sbin/nologin -c "nonroot user" nonroot && \
     mkdir -p /home/nonroot && \
     chown -R nonroot:nonroot /home/nonroot
 
